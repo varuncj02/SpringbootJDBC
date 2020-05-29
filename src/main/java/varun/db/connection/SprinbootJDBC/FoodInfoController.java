@@ -39,8 +39,8 @@ public class FoodInfoController {
 	
 	@PutMapping(path="/ratingupdate")
 	public int updateRating(@RequestBody FoodInfo foodInfo) {
-		//Rating has to come from the User in JSON format - There has to be way for that to be sent back
-		//foodRepositoryDAO.updateRating(foodInfo, rating);
+		//Rating has to come from the User in JSON format - There has to be way for that to be sent back - Takes in rating from JSON adds to the db
+		foodRepositoryDAO.updateRating(foodInfo, foodInfo.getRating());
 		return 0; // Temporary Statement
 	}
 	
