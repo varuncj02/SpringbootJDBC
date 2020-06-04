@@ -9,6 +9,8 @@ import GroupIcon from "@material-ui/icons/Group";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
+import axios from "axios";
+
 
 // Give Code Snippet Credit here 
 
@@ -47,5 +49,8 @@ export default function FoodInfo() {
     const [calories, setCalories] = React.useState(0);
     const [counter, setCounter] = React.useState(0);
     const [rating, setRating] = React.useState(0);
+
+    const handleFoodNameChange = event => setFoodName(event.target.value);
+    const handleCuisineChange = event => setCuisine(event.target.value);
 
 }

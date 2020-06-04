@@ -4,6 +4,8 @@ import './App.css';
 import FoodInfo from "./FoodInfo";
 import Table from "./Table";
 import { Route, BrowserRouter as Router } from "react-router-dom";
+import axios from "axios";
+
 
 function App() {
   return (

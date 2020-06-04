@@ -1,6 +1,7 @@
 package varun.db.connection.SprinbootJDBC;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 // Springboot Packages
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -15,6 +16,7 @@ import java.util.*;
 
 @RestController 
 @RequestMapping(path="/user")
+@CrossOrigin("*")
 public class FoodInfoController {
 	
 	@Autowired
