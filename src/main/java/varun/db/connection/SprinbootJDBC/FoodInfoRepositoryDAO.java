@@ -6,8 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
+//import java.sql.Connection;
+//import java.sql.PreparedStatement;
+
+
 
 //Will Store all The DB info and perform processes on the FoodInfo class using the FoodInfoDAO interface
 
@@ -16,6 +18,9 @@ public class FoodInfoRepositoryDAO implements FoodInfoDAO{
 
 	@Autowired
 	JdbcTemplate jdbcTemplate;
+	
+	@Autowired 
+	InfoBusinessLogic businessLogic;
 
 	// Gets all the info from the mysql database
 	public List<FoodInfo> getFoodInfo() {
@@ -38,6 +43,16 @@ public class FoodInfoRepositoryDAO implements FoodInfoDAO{
         }).forEach((foodInfo) -> {
         	foodList.add(foodInfo);
         });
+		return foodList;
+	}
+	
+	public List<FoodInfo> getRevisedFoodInfo() {
+		List<FoodInfo> foodList = new ArrayList<FoodInfo>();
+		foodList = getFoodInfo();
+		Iterator<FoodInfo> iter = foodList.iterator();
+		while(iter.hasNext()) {
+			// Code to extract the Amount of calories and ensure that the limit is always less than s
+		}
 		return foodList;
 	}
 	
