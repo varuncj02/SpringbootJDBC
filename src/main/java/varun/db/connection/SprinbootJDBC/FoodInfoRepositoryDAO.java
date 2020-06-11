@@ -46,15 +46,12 @@ public class FoodInfoRepositoryDAO implements FoodInfoDAO{
 		return foodList;
 	}
 	
-	public List<FoodInfo> getRevisedFoodInfo() {
-		List<FoodInfo> foodList = new ArrayList<FoodInfo>();
-		foodList = getFoodInfo();
-		Iterator<FoodInfo> iter = foodList.iterator();
-		while(iter.hasNext()) {
-			// Code to extract the Amount of calories and ensure that the limit is always less than s
-		}
-		return foodList;
+	
+	public FoodInfo getFoodItem(int id) {
+		List<FoodInfo> list = getFoodInfo();
+		return FoodInfo;
 	}
+	
 	
 	// Increments the value of the number of times a dish is being used
 	public void incrementCounter(FoodInfo foodInfo) {
