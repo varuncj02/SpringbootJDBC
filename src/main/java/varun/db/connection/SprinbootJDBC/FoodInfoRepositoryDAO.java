@@ -47,10 +47,10 @@ public class FoodInfoRepositoryDAO implements FoodInfoDAO{
 	}
 	
 	
-	public FoodInfo getFoodItem(int id) {
+	/*public FoodInfo getFoodItem(int id) {
 		List<FoodInfo> list = getFoodInfo();
 		return FoodInfo;
-	}
+	}*/
 	
 	
 	// Increments the value of the number of times a dish is being used

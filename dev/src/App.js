@@ -1,35 +1,25 @@
-import React from 'react';
+import React,  {Text, Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import FoodInfo from "./FoodInfo";
-import Table from "./Table";
+import {FoodInfo} from "./Components/FoodInfo";
+import {Table} from "./Components/Table";
 import { Route, BrowserRouter as Router } from "react-router-dom";
 import axios from "axios";
 
 
-function App() {
+class App extends Component() {
+  render(){
+
+  
   return (
-    /*<div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>*/
-    <Router>
-    <Route exact path="/" component={FoodInfo} />
+    
+
+     
+  <Router>
+      <Route exact path="/" component={FoodInfo} />
     <Route exact path="/view" component={Table} />
   </Router>
-  );
+  );}
 }
 
 export default App;
