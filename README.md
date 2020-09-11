@@ -1,6 +1,6 @@
 # FoodMenu
 
-## Story Behing
+## Story Behind
 I was planning to move back to college and worried about cooking my own food this semester. When I thought what dishes I would cook up, I noticed that even my parents struggled with thinking about what to cook in a week to make it unique. Being a critical thinker, problem solver and passionate programmer I decided to come up with my project FoodMenu that generated a list of food items for every week.
 
 ## Description of the Project 
